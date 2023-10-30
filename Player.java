@@ -12,22 +12,18 @@ public class Player
   private boolean isTurn;
   private String name;
   /* your code here - constructor(s) */ 
-  public Player(String name){
-    this.name = name;
+  public Player(){
+    System.out.println("Please enter your name:");
+    Scanner sc = new Scanner(System.in);
+    name = sc.nextLine();
+    points = 0;
+    System.out.println("Welcome to the game " + name + "!);
+  }
+  public Player(String inputName){
+    name = inputName;
+    points = 0;
+    System.out.println("Welcome to the game " + name + "!);
   }
   /* your code here - accessor(s) */ 
-  public int getPoints(){
-    return this.points;
-  }
-  public boolean getTurn(){
-    return this.isTurn;
-  }
   /* your code here - mutator(s) */ 
-  public void setPoints(int value){
-    this.points = value;
-  }
-  public void setTurn(Boolean bool){
-    this.isTurn = bool;
-  }
-  
 }
