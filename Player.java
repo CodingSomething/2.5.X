@@ -24,6 +24,26 @@ public class Player
     points = 0;
     System.out.println("Welcome to the game " + name + "!");
   }
+  
   /* your code here - accessor(s) */ 
+    public int getPoints() {
+    // Test return
+    /* incomplete */
+    return 0;
+  }
+
+  public String getName() {
+    // Test return
+    /* incomplete */
+    return "";
+  }
+  
   /* your code here - mutator(s) */ 
+  public void setPoints(int points) {
+    /* incomplete */
+  }
+
+  public void setName(String name) {
+    /* incomplete */
+  }
 }
