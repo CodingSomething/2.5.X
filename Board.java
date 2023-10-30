@@ -87,6 +87,19 @@ public class  Board
     return tempPhrase;
   }  
 
+  /* Takes a letter input, updates solvedPhrase if the letter is in the phrase, 
+   * and returns a boolean based on if the letter is in the phrase
+   * 
+   * Precondition:
+   *  The guess argument must be a single letter
+   * 
+   * Postcondition:
+   *  If guessLetter() returns true,
+   *  solvedPhrase is updated to have the specified letter filled in the phrase where a _ character would be
+   *  
+   *  If guessLetter() returns false,
+   *  solvedPhrase is not updated
+   */
   public boolean guessLetter(String guess)
   {
     //creates a new boolean variable foundLetter that is initialized to false
