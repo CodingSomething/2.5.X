@@ -89,22 +89,31 @@ public class  Board
 
   public boolean guessLetter(String guess)
   {
+    //creates a new boolean variable foundLetter that is initialized to false
     boolean foundLetter = false;
+    //creates a new String variable newSolvedPhrase that is empty string
     String newSolvedPhrase = "";
-    
+    //a for loop that iterates for the length of phrase
     for (int i = 0; i < phrase.length(); i++)
     {
+      //an if statement that checks whether the letter at index i in phrase is equal to the letter guessed
       if (phrase.substring(i, i + 1).equals(guess))
       {
+        //the newSolvedPhrase has the guess and a space added to it
         newSolvedPhrase += guess + " ";
+        //foundLetter is set to true
         foundLetter = true;
       }
+      //if the letter at index i in phrase is not equal to the letter guessed
       else
       {
+        // newSolvedPhrase gets the character at the index i*2 in solvedPhrase and a space added to it
         newSolvedPhrase += solvedPhrase.substring(i * 2, i * 2 + 1) + " ";  
       }
     }
+    //solvedPhrase is set to newSolvedPhrase
     solvedPhrase = newSolvedPhrase;
+    //foundLetter is returned
     return foundLetter;
   } 
 } 
