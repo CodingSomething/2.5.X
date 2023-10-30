@@ -17,12 +17,12 @@ public class Player
     Scanner sc = new Scanner(System.in);
     name = sc.nextLine();
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!");
   }
   public Player(String inputName){
     name = inputName;
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!");
   }
   /* your code here - accessor(s) */ 
   /* your code here - mutator(s) */ 
