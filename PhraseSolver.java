@@ -8,19 +8,13 @@ import java.util.Scanner;
 public class PhraseSolver
 {
   /* your code here - attributes */
-  private boolean solved;
-  private Board board;
-  private Player player1;
-  private Player player2;
   /* your code here - constructor(s) */ 
   public PhraseSolver(){
-
+    Player player1 = new Player();
+    Player player2 = new Player();
+    Board board = new Board();
+    solved = false;
   }
-  System.out.println("Please enter the name of the first player.");
-  player1 = new Player(sc.NextLine());    
-  System.out.println("Please enter the name of the second player.");
-  player2 = new Player(sc.NextLine());
-  board = new Board();
   /* your code here - accessor(s) */
   
   /* your code here - mutator(s)  */
