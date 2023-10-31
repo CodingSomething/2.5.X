@@ -38,8 +38,6 @@ public class PhraseSolver
       
       /* your code here - determine how game ends */
       solved = true; 
-    } 
+  } 
    
-  }
-  
 }
