@@ -26,16 +26,12 @@ public class Player
   }
   
   /* your code here - accessor(s) */ 
-    public int getPoints() {
-    // Test return
-    /* incomplete */
-    return 0;
+  public int getPoints() {
+    return points;
   }
 
   public String getName() {
-    // Test return
-    /* incomplete */
-    return "";
+    return name;
   }
   
   /* your code here - mutator(s) */ 
