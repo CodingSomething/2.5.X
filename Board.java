@@ -20,9 +20,9 @@ public class  Board
     System.out.println("Phrase: " + phrase); //temp test code
   }
   /* your code here - accessor(s) */
-  public int getLetterValue() (
+  public int getLetterValue() {
     return currentLetterValue;
-  )
+  }
   public String getSolvedPhrase(){
     return solvedPhrase;
   }
