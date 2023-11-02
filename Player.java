@@ -17,13 +17,29 @@ public class Player
     Scanner sc = new Scanner(System.in);
     name = sc.nextLine();
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!");
   }
   public Player(String inputName){
     name = inputName;
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!");
   }
+  
   /* your code here - accessor(s) */ 
+  public int getPoints() {
+    return points;
+  }
+
+  public String getName() {
+    return name;
+  }
+  
   /* your code here - mutator(s) */ 
+  public void setPoints(int points) {
+    this.points = points;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }
