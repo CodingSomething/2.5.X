@@ -20,9 +20,17 @@ public class  Board
     System.out.println("Phrase: " + phrase); //temp test code
   }
   /* your code here - accessor(s) */
-  
-  /* your code here - mutator(s)  */
+  public int getLetterValue() {
+    return currentLetterValue;
+  }
+  public String getSolvedPhrase(){
+    return solvedPhrase;
+  }
+  public String getCurrentPhrase(){
+  	return phrase;
+  }
 
+  /* your code here - mutator(s)  */
 
   /* ---------- provided code, do not modify ---------- */
   public void setLetterValue()
@@ -47,7 +55,8 @@ public class  Board
     int numOfLines = 0;
     try 
     {
-      Scanner sc = new Scanner(new File("phrases.txt"));
+      //Must copy entire file path for Scanner to find the file.
+      Scanner sc = new Scanner(new File("C:\\Users\\P5\\VS Code\\PLTW 2.5.X\\2.5.X\\phrases.txt"));
       while (sc.hasNextLine())
       {
         tempPhrase = sc.nextLine().trim();
@@ -60,7 +69,8 @@ public class  Board
     try 
     {
       int count = 0;
-      Scanner sc = new Scanner(new File("phrases.txt"));
+      //Must copy entire file path for Scanner to find the file.
+      Scanner sc = new Scanner(new File("C:\\Users\\P5\\VS Code\\PLTW 2.5.X\\2.5.X\\phrases.txt"));
       while (sc.hasNextLine())
       {
         count++;
@@ -85,26 +95,48 @@ public class  Board
     }  
     
     return tempPhrase;
-  }  
+  }    
 
+  /* Takes a letter input, updates solvedPhrase if the letter is in the phrase, 
+   * and returns a boolean based on if the letter is in the phrase
+   * 
+   * Precondition:
+   *  The guess argument must be a single letter
+   * 
+   * Postcondition:
+   *  If guessLetter() returns true,
+   *  solvedPhrase is updated to have the specified letter filled in the phrase where a _ character would be
+   *  
+   *  If guessLetter() returns false,
+   *  solvedPhrase is not updated
+   */
   public boolean guessLetter(String guess)
   {
+    //creates a new boolean variable foundLetter that is initialized to false
     boolean foundLetter = false;
+    //creates a new String variable newSolvedPhrase that is empty string
     String newSolvedPhrase = "";
-    
+    //a for loop that iterates for the length of phrase
     for (int i = 0; i < phrase.length(); i++)
     {
+      //an if statement that checks whether the letter at index i in phrase is equal to the letter guessed
       if (phrase.substring(i, i + 1).equals(guess))
       {
+        //the newSolvedPhrase has the guess and a space added to it
         newSolvedPhrase += guess + " ";
+        //foundLetter is set to true
         foundLetter = true;
       }
+      //if the letter at index i in phrase is not equal to the letter guessed
       else
       {
+        // newSolvedPhrase gets the character at the index i*2 in solvedPhrase and a space added to it
         newSolvedPhrase += solvedPhrase.substring(i * 2, i * 2 + 1) + " ";  
       }
     }
+    //solvedPhrase is set to newSolvedPhrase
     solvedPhrase = newSolvedPhrase;
+    //foundLetter is returned
     return foundLetter;
   } 
 } 
