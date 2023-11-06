@@ -17,13 +17,33 @@ public class Player
     Scanner sc = new Scanner(System.in);
     name = sc.nextLine();
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!\n");
   }
   public Player(String inputName){
     name = inputName;
     points = 0;
-    System.out.println("Welcome to the game " + name + "!);
+    System.out.println("Welcome to the game " + name + "!\n");
   }
+  
   /* your code here - accessor(s) */ 
+  //Implements requirements for PLTW 2.5.4
+  public int getPoints() {
+    return points;
+  }
+
+  //Implements requirements for PLTW 2.5.4
+  public String getName() {
+    return name;
+  }
+  
   /* your code here - mutator(s) */ 
+  //Implements requirements for PLTW 2.5.5
+  public void setPoints(int points) {
+    this.points = points;
+  }
+
+  //Implements requirements for PLTW 2.5.5
+  public void setName(String name) {
+    this.name = name;
+  }
 }
