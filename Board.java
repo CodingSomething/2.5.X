@@ -13,19 +13,22 @@ public class  Board
   private int currentLetterValue; 
 
   /* your code here - constructor(s) */ 
+  //Implements requirements for PLTW 2.5.2
   Board() {
     solvedPhrase = "";
     phrase = loadPhrase();
     setLetterValue();
-    System.out.println("Phrase: " + phrase); //temp test code
   }
   /* your code here - accessor(s) */
+  //Implements requirements for PLTW 2.5.4
   public int getLetterValue() {
     return currentLetterValue;
   }
+  //Implements requirements for PLTW 2.5.4
   public String getSolvedPhrase(){
     return solvedPhrase;
   }
+  //Implements requirements for PLTW 2.5.4
   public String getCurrentPhrase(){
   	return phrase;
   }
